@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registrar Pregunta Frecuente</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/preguntasFrecuentes.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top"></div>
+        <div class="header__bottom">
+            <div class="columna__izquierda">
+                <a href="#">
+                    <img src="imgs/logo_mep.png" class="imagen_mep">
+                </a>
+            </div>
+            <div class="columna__derecha">
+                <div class="contenedor">
+                    <nav class="celda">
+                        <a class="logo" href="#">
+                            <img src="imgs/parents.jpg" />
+
+                            <span>Adam</span>
+                        </a>
+                    </nav>
+                    <form class="celda">
+                        <button type="button" class="btn" id="btn-sesion">Cerrar sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1 class="titulo">Registrar Pregunta Frecuente</h1>
+            <div class="wrapper">
+                <div class="celda columna__izquierda-cita">
+                    <div class="columna__contenedor-izquierdo">
+                        <form class="formulario-preguntaFrecuente">
+                            <div class="datos">
+                                <label for="txt_pregunta">Pregunta</label>
+                                <div class="controlador" id="pregunta">
+                                    <input type="text" id="txt_pregunta" />
+                                    <i class="fas fa-question"></i>
+                                </div>
+                            </div>
+                            <div class="datos">
+                                <label for="txt_respuesta">Respuesta</label>
+
+                                <div class="controlador" id="respuesta">
+                                    <textarea type="text" id="txt_respuesta"></textarea>
+                                    <i class="fas fa-info"></i>
+                                </div>
+                            </div>
+                            <!-- -->
+                            <input type="hidden" id="centro" name="codigo_centro" value="23152" />
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <form class="formulario-boton">
+            <button type="button" class="btn_registrar" id="btn">Registrar</button>
+
+        </form>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/servicio_preguntaFrecuente.js"></script>
+    <script src="js/controlador_preguntaFrecuente.js"></script>
+
+</body>
+
+</html>

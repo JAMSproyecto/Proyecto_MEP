@@ -1,0 +1,108 @@
+
+.header{
+    box-shadow: -2px 4px 13px #bdc3c7;
+  
+}
+
+.contenedor{
+    margin: 0 auto;
+    width: 1117px;
+}
+
+
+.header__top{
+background: #0c2461;
+font-family: "Bebas";
+display: flow-root;
+
+}
+.header__top nav{
+    text-align: right;
+    padding: 4px;
+  
+}
+
+.menu_top .sesion {
+        background: #f1c40f;
+        color: #fff;
+        padding: 10px 20px;
+        margin: 36px;
+       /* background: #2980b9;*/
+        text-decoration: none;
+
+}
+
+.header__bottom{
+    background: #f9f9f9;
+     padding: 10px 0;
+     display: flow-root;
+
+}
+.logo{
+    float: left;
+}
+
+.logo img{
+    width: 115px;
+    padding: 4px;
+
+}
+
+
+.menu_top > ul{
+    display: table;
+   
+}
+
+
+.menu_top > ul > li{
+    display: table-cell;
+}
+
+
+.menu_top  > ul >  li >  a{
+ 
+    margin: 18px;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 7px 0; 
+    color: #fff;
+}
+.menu_top{
+    float: right;
+  
+}
+
+.columna__derecha img{
+    border-radius: 130px;
+    width: 90px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+
+
+/*fin de estilos header*/
+
+.sesion{
+    -webkit-transition-duration: 0.5s;
+}
+
+.btn_top:hover{
+    border-bottom: 2px solid #f0932b;
+     
+   
+}
+
+.btn_top:hover a{
+    margin: 10px;
+  
+}
+
+.sesion:hover{
+    background: #009432;
+    color:#fff;
+    border-radius: 10px;
+ 
+}
+

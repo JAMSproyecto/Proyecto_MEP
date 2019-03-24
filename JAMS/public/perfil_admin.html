@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil Admin</title>
+    <link rel="stylesheet" href="css/estilosCss.css" />
+    <link rel="stylesheet" href="css/header.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top">
+            <nav class="menu_top">
+                <ul>
+                    <li><a class="btn_top modificar" href="#">Modificar Perfil</a>
+                    </li>
+                    <li> <a class="btn_top contrasenia" href="#">Cambiar Contraseña</a></li>
+                    <li> <a class="btn_top notificacioness" href="#">notificaciones</a></li>
+                    <li>
+                        <a class="sesion" href="#">Cerrar sesion</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="header__bottom">
+            <div class="header__content">
+                <div class="contenedor">
+                    <div class="logo">
+                        <img src="css/imgs/logo_mep.png" class="imagen_mep">
+                    </div>
+                    <nav class="menu-derecho">
+                        <ul>
+                            <span>|</span>
+                            <li>
+                                <a class="reporte">Reportes</a>
+                                <ul>
+                                    <li><a href="#">Ranking:Padres de familia</a></li>
+                                    <li><a href="#">Ranking:MEP</a></li>
+                                    <li><a href="#">Visitas a Centros Educativos</a></li>
+                                    <li><a href="#">Bitacora Transacional</a></li>
+                                </ul>
+                            </li>
+
+                            <span>|</span>
+                            <li>
+
+                                <a class="calificaciones" href="#">Calificaciones</a>
+                                <ul>
+                                    <li><a href="#">Calificar un Centro Educativo</a></li>
+                                    <li><a href="#">Registrar un Rubro</a></li>
+                                    <li><a href="#">Lista de Rubros</a></li>
+                                    <li><a href="#"> Ver calificación de Centros </a></li>
+                                </ul>
+
+                            </li>
+                            <span>|</span>
+                            <li><a class="centros" href="#">Centros Educativos</a>
+                                <ul>
+                                    <li><a href="#">Lista de Centros Educativos</a></li>
+                                    <li><a href="#">Registrar Centro Educativo</a></li>
+                                    <li><a href="#">Aprobar/Rechazar Centro Educativo</a></li>
+                                    <li><a href="#"> Suspender/Reactivar Centro Educativo </a></li>
+                                </ul>
+                            </li>
+                            <span>|</span>
+                            <li><a class="utiles" href="#">Lista de Utiles</a>
+                                <ul>
+                                    <li><a href="#">Ver lista de Utiles</a></li>
+                                    <li><a href="#">Modificar lista de Utiles</a></li>
+                                </ul>
+                            </li>
+                            <span>|</span>
+                            <li><a class="padres" href="#">Usuarios Padres</a></li>
+                            <span>|</span>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+        <section class="lista_centros">
+
+            <div class=" grey centros">
+                <strong>Lista de centros por Aprobar</strong>
+                <table id="tbl_centro">
+
+                    <thead>
+                        <tr>
+                            <th>Nombre del Centro</th>
+                            <th>Cédula Juridica</th>
+                            <th>Correo</th>
+                            <th>Ubicación</th>
+                            <th>Fecha</th>
+
+                        </tr>
+                    </thead>
+
+
+                </table>
+            </div>
+
+            <div class="grey atrasados">
+                <strong>Lista de centros atrasados</strong>
+                <table id="tbl_centro">
+
+                    <thead>
+                        <tr>
+                            <th>Nombre del Centro</th>
+                            <th>Cédula Juridica</th>
+                            <th>Correo</th>
+                            <th>Ubicación</th>
+                            <th>Fecha</th>
+
+                        </tr>
+                    </thead>
+
+
+                </table>
+
+            </div>
+
+           
+
+
+
+
+
+        </section>
+    </main>
+</body>
+
+</html>

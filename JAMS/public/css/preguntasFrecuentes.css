@@ -1,0 +1,31 @@
+/*
+    Estilos para el formulario de registro de preguntas frecuentes
+*/
+
+.titulo{
+    width: 530px;
+}
+
+.columna__izquierda-cita{
+    padding-bottom: 45px;
+    text-align: center;
+}
+
+#respuesta{
+    top:23px;
+}
+
+#respuesta .fas{
+    top: 16px;
+}
+
+input{
+    width: 385px;
+}
+textarea{
+    width: 374px;
+}
+
+.fas{
+    font-size: 13px;
+}
