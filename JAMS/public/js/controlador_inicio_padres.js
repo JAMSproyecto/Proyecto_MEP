@@ -25,14 +25,9 @@ let obtener_Datos = () => {
     let errorBlancos = validar(usuario, contrasenna);
 
     if (!errorBlancos) {
-       let usuarioAceptado = validar_credenciales(usuario, codificar(contrasenna));
+        let usuarioAceptado = validar_credenciales(usuario, codificar(contrasenna));
         if (usuarioAceptado) {
-            if (usuarioAceptado.succsess === true) {
-                window.location.href = 'principal_padres.html';
-            } else {
-                mostrarAlerta(usuarioAceptado.message);
-            }
-
+            window.location.href = 'principal_padres.html';
         } else {
             mostrarAlerta('Usuario o contraseña invalida');
         }

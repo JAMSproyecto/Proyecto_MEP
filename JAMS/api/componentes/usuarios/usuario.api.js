@@ -156,7 +156,7 @@ module.exports.validar_credenciales = function (req, res) {
                 if (usuario.contrasena === req.body.contrasena) {
                     res.json({
                         success: true,
-                        message: usuario
+                        message: usuario,
                     });
                 } else {
                     res.json({
@@ -172,4 +172,4 @@ module.exports.validar_credenciales = function (req, res) {
             }
         }
     )
-};
+}; 

@@ -16,7 +16,8 @@ let schemaUsuarios = new Mongoose.Schema(
         contrasena: {
             type: TiposEsquema.String,
             required: false,
-            trim: true
+            trim: true,
+            default: ''
         },
         tipo: {
             type: TiposEsquema.String,
