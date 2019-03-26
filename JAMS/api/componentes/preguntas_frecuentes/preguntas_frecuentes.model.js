@@ -3,7 +3,7 @@
 const Mongoose = require('mongoose');
 
 let preguntaFrecuente =  new Mongoose.Schema({
-    idCentroEducativo: {type: Number, required: true},
+    idCentroEducativo: {type: Number},
     pregunta : { type: String, required: true},
     respuesta : { type: String, required: true}
 });
