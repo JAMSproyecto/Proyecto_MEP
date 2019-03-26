@@ -11,7 +11,7 @@ router.route('/registrar_preguntaFrecuente_centroEducativo')
     );
 
 router.route('/obtener_preguntaFrecuente_centroEducativo')
-    .get(
+    .post(
         function (req, res) {
             pregunta_frecuente_api.obtener_PreguntaFrecuente_CentroEducativo(req, res);
         }

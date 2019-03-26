@@ -6,49 +6,48 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Registrar Pregunta Frecuente</title>
     
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/generales.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/formulario.css"/>
-    <link rel="stylesheet" href="css/footer.css"/>
-    <link rel="stylesheet" href="css/preguntasFrecuentes.css"/>
+    <link href="./css/reset.min.css" rel="stylesheet">
+    <link href="./css/fontawesome/all.min.css" rel="stylesheet">
+    <link href="./css/animate.min.css" rel="stylesheet">
+    <link href="./css/general.css" rel="stylesheet">
+    <link href="./css/headerRegistro.css" rel="stylesheet">
+    <link href="./css/footer.css" rel="stylesheet">
+    <link href="./css/registrarCentroEducativo.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/preguntasFrecuentes.css"/>
     
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="menuPrincipal">
         <div class="header__top"></div>
-        <div class="header__bottom">
-            <div class="columna__izquierda">
-                <a href="#">
-                    <img src="imgs/logo_mep.png" class="imagen_mep">
+        <nav class="header__nav">
+            <a class="header__nav__brand" href="javascript:void(0);">
+                <img alt="Logo" src="./imgs/logo_mep.png">
+            </a>
+            <a class="header__nav__active" href="./registrarPreguntaFrecuenteGeneral.html">Registrar pregunta frecuente general</a>
+            <a href="./listarPreguntasFrecuentesGenerales.html">Preguntas frecuentes</a>
+            <a class="header__nav__bars" href="javascript:void(0);" onclick="menuPrincipal(); return false;">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div class="header__nav__right">
+                <a class="header__nav__right__avatar" href="javascript:void(0);">
+                    <img alt="Avatar" src="./imgs/parents.jpg">
+                    <span>Adam</span>
                 </a>
+                <a class="btn btn--amarillo" href="./iniciarSesion.html">Iniciar sesión</a>
             </div>
-            <div class="columna__derecha">
-                <div class="contenedor">
-                    <nav class="celda">
-                        <a class="logo" href="#">
-                            <img src="imgs/parents.jpg" />
-
-                            <span>Adam</span>
-                        </a>
-                    </nav>
-                    <form class="celda">
-                        <button type="button" class="btn" id="btn-sesion">Cerrar sesión</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-        </div>
+        </nav>
     </header>
-    <main>
-        <section>
-            <h1 class="titulo">Registrar Pregunta Frecuente</h1>
+    <main class="formulario">
+        <div class="text_center">
+            <h1>Registro de pregunta frecuente</h1>
+        </div>
+        <section id="preguntaFrecuente">
+
+            
             <div class="wrapper">
                 <div class="celda columna__izquierda-cita">
-                    <div class="columna__contenedor-izquierdo">
+                    <div class="contenedor-izquierdo">
                         <form class="formulario-preguntaFrecuente">
                             <div class="datos">
                                 <label for="txt_pregunta">Pregunta</label>
@@ -68,8 +67,6 @@
 
                             </div>
                             
-                            <!-- -->
-                            <input type="hidden" id="centro" name="codigo_centro" value="23152" />
                         </form>
 
                     </div>

@@ -11,6 +11,7 @@
     text-align: center;
 }
 
+/* Formulario Pregunta Frecuente */
 #respuesta{
     top:23px;
 }
@@ -28,4 +29,25 @@ textarea{
 
 .fas{
     font-size: 13px;
+}
+
+/* Lista pregunta frecuente */
+#filtro input{
+    width: 200px; 
+    margin-bottom: 20px;
+    margin-left: 10px;
+
+    padding: 11px 45px;
+    border: 0px;
+    border-radius: 4px;
+}
+.controlador{
+    position: relative;
+    display: inline-block;
+}
+
+.controlador .fas{
+    position: absolute;
+    left: 20px;
+    top: 13px;
 }

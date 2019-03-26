@@ -99,7 +99,7 @@ module.exports.registrar_PreguntaFrecuente_General = (req, res) =>{
     let preguntaFrecuente = new Model_PreguntaFrecuente({
         pregunta: req.body.pregunta,
         respuesta: req.body.respuesta,
-        idCentroEducativo: null
+        idCentroEducativo: "General"
     });
 
     preguntaFrecuente.save( (error)=>{
@@ -138,7 +138,7 @@ module.exports.registrar_PreguntaFrecuente_General = (req, res) =>{
  */
 module.exports.obtener_PreguntaFrecuente_General = (req ,res) =>{
     Model_PreguntaFrecuente.find({
-        idCentroEducativo: null
+        idCentroEducativo: "General"
     }).then(
         function(preguntasFrecuentes){
             if(preguntasFrecuentes.length > 0){

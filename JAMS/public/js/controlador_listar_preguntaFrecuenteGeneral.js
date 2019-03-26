@@ -27,7 +27,7 @@ let filtrarPreguntas = () =>{
 window.addEventListener('load', () => {
 
     /** Metodo listar_mascotas definido en el servicio_mascotas */
-    get_ListarPreguntasFrecuentes(Tabla_PreguntaFrecuente, Id_Centro.value);
+    get_ListarPreguntasFrecuentesGenerales(Tabla_PreguntaFrecuente);
     Slt_Filtros.addEventListener('keyup', filtrarPreguntas);
     Slt_Filtros.addEventListener('blur', filtrarPreguntas);
 
