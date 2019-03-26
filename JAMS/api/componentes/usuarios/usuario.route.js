@@ -20,9 +20,10 @@ Router.route('/obtener_usuarios_pendientes').get((req, res) => {
 Router.route('/validar_credenciales')
     .post(function (req, res) {
        
-       userApi.validar_credenciales(req, res);
+       UsuarioApi.validar_credenciales(req, res);
 
-    });
+});
 
 module.exports = Router;
 
+ 

@@ -8,25 +8,21 @@ const provincia_padre = document.querySelector('#provincia_padre');
 const canton_padre = document.querySelector('#canton_padre');
 const distrito_padre = document.querySelector('#distrito_padre');
 
-let usuario = ver_padres();
-let padresFamilia = listar_padres();
+let id_padre = sessionStorage.getItem('correo');
 
-let llenar_perfil_padre = () => {
+let infoPadre = buscar_padre(id_padre);
+if(infoPadre && Object.keys(infoPadre).length > 0){
 
-    for (let i = 0; i < padresFamilia.length; i++) {
 
-        nombre_padre.innerHTML = padresFamilia[i]['nombre'];
-        correo_electronico_padre.innerHTML = padresFamilia[i]['email'];
-        telefono_padre.innerHTML = padresFamilia[i]['numCel'];
-        identificacion_padre.innerHTML = padresFamilia[i]['numIdentificacion'];
-        provincia_padre.innerHTML = padresFamilia[i]['provincia'];
-        canton_padre.innerHTML = padresFamilia[i]['canton'];
-        distrito_padre.innerHTML = padresFamilia[i]['distrito'];
+        nombre_padre.innerHTML = infoPadre['nombre'];
+        correo_electronico_padre.innerHTML = infoPadre['correo'];
+        telefono_padre.innerHTML = infoPadre['numCel'];
+        identificacion_padre.innerHTML = infoPadre['numIdentificacion'];
+        provincia_padre.innerHTML = infoPadre['provincia'];
+        canton_padre.innerHTML = infoPadre['canton'];
+        distrito_padre.innerHTML = infoPadre['distrito']; 
+        } else {
+            console.log(infoPadre[0]);
         }
-
-
-};
-
-
-
-llenar_perfil_padre();
+        
+        

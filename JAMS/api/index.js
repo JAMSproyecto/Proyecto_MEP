@@ -99,6 +99,7 @@ app.use((req, res, next) => {
  * Obtener los componentes y asignarlos a la app
  */
 
+
 const articulos = require('./componentes/articulos/articulos.route');
 const lista_utiles = require('./componentes/lista_utiles/lista_utiles.route');
 const bitacora_transaccional = require('./componentes/bitacora_transaccional/bitacora.route');
@@ -106,11 +107,11 @@ const citas = require('./componentes/citas/citas.route');
 const ce_niveles = require('./componentes/centro_educativo_niveles/CEduNiveles.route');
 const instalacion = require('./componentes/instalacion/instalacion.route');
 const registrar_ce = require('./componentes/registrar_centro_educativo/registrarCEdu.route');
+const CompCredenciales = require('./componentes/credenciales/credenciales.route');
 const registrar_pf = require('./componentes/registro_padre/registro_padre_route');
 const usuario = require('./componentes/usuarios/usuario.route');
 const pregunta_frec = require('./componentes/preguntas_frecuentes/preguntas_frecuentes.route');
-const CompCredenciales = require('./componentes/credenciales/credenciales.route');
-
+const actividades = require('./componentes/actividad/registrar_actividad.route');
 
 
 //app.use('/api', actividades);
@@ -121,11 +122,12 @@ app.use('/api', ce_niveles);
 app.use('/api', citas);
 app.use('/api', lista_utiles);
 app.use('/api', registrar_ce);
+app.use('/api', CompCredenciales);
 app.use('/api', registrar_pf);
 app.use('/api', usuario);
 app.use('/api', pregunta_frec);
 app.use('/api', instalacion);
-app.use('/api', CompCredenciales);
+app.use('/api', actividades);
 
 // Se guarda todo lo que se ha realizado
 module.exports = app;

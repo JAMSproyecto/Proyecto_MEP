@@ -2,9 +2,9 @@
 const Model_Registro_Padre = require('./registro_padre_model');
 const Model_usuario = require('./../usuarios/usuario.model');
 const Nodemailer = require('nodemailer');
-const Obtener_Pin = require ('./../funciones_genericas/obtenerPin');
+const Obtener_Pin = require('./../funciones_genericas/obtenerPin');
 const Pin_Obtenido = Obtener_Pin.get();
-const ObtenerFecha = require ('./../funciones_genericas/obtenerFecha');
+const ObtenerFecha = require('./../funciones_genericas/obtenerFecha');
 
 
 let transporter = Nodemailer.createTransport({
@@ -16,8 +16,8 @@ let transporter = Nodemailer.createTransport({
 });
 
 module.exports.registrar_Padre = (req, res) => {
-       
-    let registro_usuario = new Model_usuario (
+
+    let registro_usuario = new Model_usuario(
         {
             correo: req.body.email,
             pin: Pin_Obtenido,
@@ -26,10 +26,10 @@ module.exports.registrar_Padre = (req, res) => {
         }
 
     );
-  
+
     let registro_Padre = new Model_Registro_Padre(
         {
-            email: req.body.email,
+            correo: req.body.email,
             nombre: req.body.nombre,
             segundoNombre: req.body.segundoNombre,
             apellido: req.body.apellido,
@@ -58,11 +58,11 @@ module.exports.registrar_Padre = (req, res) => {
 
     registro_usuario.save(
         (error) => {
-            if (error){
+            if (error) {
                 res.json(
                     {
                         success: false,
-                        message:  `1Ha ocurrido el siguiente error ${error}` 
+                        message: `1Ha ocurrido el siguiente error ${error}`
                     }
                 )
             } else {
@@ -72,29 +72,29 @@ module.exports.registrar_Padre = (req, res) => {
                             res.json(
                                 {
                                     success: false,
-                                    message: `2Ha ocurrido el siguiente error ${error}`
+                                    message: `Ha ocurrido el siguiente error ${error}`
                                 }
                             )
                         } else {
-            
+
                             let mailOptions = {
                                 from: 'soporte.mep.costarica@gmail.com',
                                 to: registro_Padre.email,
                                 subject: 'Verificación de correo electrónico',
-                                html: `<h1 style="color:#227093;">Saludos ${registro_Padre.nombre} </h1>
+                                html: `<h1 style="color:#227093;">Saludos ${ registro_Padre.nombre} </h1>
                                 <p>Gracias por registrarse en nuestra aplicación</p>
                                 <p>Por favor verifique el siguiente pin de validación</p>
                                 <p>${Pin_Obtenido} </p>
                                 `
                             };
-                            transporter.sendMail(mailOptions, function(error, info){
+                            transporter.sendMail(mailOptions, function (error, info) {
                                 if (error) {
-                                  console.log(error);
+                                    console.log(error);
                                 } else {
-                                  console.log('Email sent: ' + info.response);
+                                    console.log('Email sent: ' + info.response);
                                 }
-                              });
-                            
+                            });
+
                             res.json(
                                 {
                                     success: true,
@@ -102,7 +102,7 @@ module.exports.registrar_Padre = (req, res) => {
                                 }
                             )
                         }
-                    }     
+                    }
                 );
             }
         }
@@ -131,3 +131,46 @@ module.exports.listar_Padres = (req, res) => {
     );
 };
 
+module.exports.buscar_padre = function (req, res) {
+    const filtros = { correo: req.body.correo };
+
+    Model_Registro_Padre.findOne(filtros).then(
+        function (usuarioPadre) {
+            if (usuarioPadre) {
+                res.json(
+                    {
+                        success: true,
+                        message: usuarioPadre
+                    }
+                );
+            } else {
+                res.json(
+                    {
+                        success: false,
+                        message: 'No se encontró el padre de familia'
+                    }
+                );
+            }
+
+        }
+    )
+};
+/*
+module.exports.buscar_informacion_padre = function(req, res){
+    Model_Registro_Padre.findOne({correo : req.body.correo}).then(
+        function(usuarioInfoPadre){
+            if(usuarioInfoPadre){
+                res.json(
+                {
+                    success: true,
+                    correo : usuarioInfoPadre
+                }
+                );
+            }else{
+                res.send('No se encontró el padre de familia');
+            }
+
+        }
+    )
+};
+*/
