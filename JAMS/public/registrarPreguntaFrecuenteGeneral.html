@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registrar Pregunta Frecuente</title>
+    
+
+    <link href="./css/reset.min.css" rel="stylesheet">
+    <link href="./css/fontawesome/all.min.css" rel="stylesheet">
+    <link href="./css/animate.min.css" rel="stylesheet">
+    <link href="./css/general.css" rel="stylesheet">
+    <link href="./css/headerRegistro.css" rel="stylesheet">
+    <link href="./css/footer.css" rel="stylesheet">
+    <link href="./css/registrarCentroEducativo.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/preguntasFrecuentes.css"/>
+    
+</head>
+<body>
+    <header class="header" id="menuPrincipal">
+        <div class="header__top"></div>
+        <nav class="header__nav">
+            <a class="header__nav__brand" href="javascript:void(0);">
+                <img alt="Logo" src="./imgs/logo_mep.png">
+            </a>
+            <a class="header__nav__active" href="./registrarPreguntaFrecuenteGeneral.html">Registrar pregunta frecuente general</a>
+            <a href="./listarPreguntasFrecuentesGenerales.html">Preguntas frecuentes</a>
+            <a class="header__nav__bars" href="javascript:void(0);" onclick="menuPrincipal(); return false;">
+                <i class="fa fa-bars"></i>
+            </a>
+            <div class="header__nav__right">
+                <a class="header__nav__right__avatar" href="javascript:void(0);">
+                    <img alt="Avatar" src="./imgs/parents.jpg">
+                    <span>Adam</span>
+                </a>
+                <a class="btn btn--amarillo" href="./iniciarSesion.html">Iniciar sesión</a>
+            </div>
+        </nav>
+    </header>
+    <main class="formulario">
+        <div class="text_center">
+            <h1>Registro de pregunta frecuente</h1>
+        </div>
+        <section id="preguntaFrecuente">
+
+            
+            <div class="wrapper">
+                <div class="celda columna__izquierda-cita">
+                    <div class="contenedor-izquierdo">
+                        <form class="formulario-preguntaFrecuente">
+                            <div class="datos">
+                                <label for="txt_pregunta">Pregunta</label>
+                                <div class="controlador" id ="pregunta">
+                                    <input type="text" id="txt_pregunta" />
+                                    <i class="fas fa-question"></i>
+                                </div>
+                            </div>
+                            <div class="datos">
+                                <label for="txt_respuesta">Respuesta</label>
+
+                                <div class="controlador" id ="respuesta">
+                                    <textarea type="text" id="txt_respuesta" ></textarea>
+                                    <i class="fas fa-info"></i>
+                                </div>
+
+
+                            </div>
+                            
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <form class="formulario-boton">
+            <button type="button" class="btn_registrar" id="btn">Registrar</button>
+
+        </form>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/servicio_preguntaFrecuente.js"></script>
+    <script src="js/controlador_preguntaFrecuenteGeneral.js"></script>
+
+
+</body>
+</html>

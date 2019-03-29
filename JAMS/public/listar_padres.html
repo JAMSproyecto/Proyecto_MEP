@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Padres de Familia</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/lista.css">
+</head>
+
+<body>
+
+        <header class="header">
+                <div class="header__top"></div>
+                <div class="header__bottom">
+                    <div class="columna__izquierda">
+                        <a href="#">
+                            <img src="imgs/logo_mep.png" class="imagen_mep">
+                        </a>
+                    </div>
+                    <div class="columna__derecha">
+                        <div class="contenedor">
+                            <nav class="celda">
+                                    <button type="button" class="btn" id="btn-sesion">Iniciar Sesión</button>
+                                </a>
+                            </nav>
+                            <form class="celda">
+                                <button type="button" class="btn" id="btn-sesion"><a href="./listar_padres.html">Lista de Padres</a></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </header>
+    <main>
+        <section>
+            <h1>Lista: Padres de Familia</h1>
+            <h3>Lista de todos los padres de familia registrados en la aplicación</h3>
+        </section>
+  
+        
+        <section class="bloque_filtro">
+                <label for="txt_filtrar">Filtrar</label>
+                <input type="text" id="txt_filtrar">
+        </section>
+
+        <section class="bloque_principal">
+
+            <table id="tabla_padres_registrados">
+                <thead>
+                    <tr class="titulo_tabla">
+                        <th>Nombre</th>
+                        <th>Primer Apellido</th>
+                        <th>Segundo Apellido</th>
+                        <th>Email</th>
+                        <th>Provincia</th>
+                        <th>Canton</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+        </section>
+
+    </main>
+
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/servicio_registro_padre.js"></script>
+<script src="js/controlador_listar_padres.js"></script>
+
+
+</html>

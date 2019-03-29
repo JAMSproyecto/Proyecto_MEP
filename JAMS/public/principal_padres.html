@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Padre de Familia</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/estilosCss.css" />
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/general.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top">
+            <nav class="menu_top">
+                <ul>
+                    <li>
+                        <a class="sesion" href="#"><button id="boton_cerrar">Cerrar sesion</button></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header__bottom">
+            <div class="header__content">
+                <div class="contenedor">
+                    <div class="logo">
+                        <img src="./imgs/logo_mep.png" class="imagen_mep">
+                    </div>
+                    <nav class="menu-derecho">
+                        <ul>
+                            <span>|</span>
+                            <li>
+                                <a class="reporte">Modificar Perfil</a>
+                            </li>
+                            <span>|</span>
+                            <li>
+                                <a class="calificaciones" href="#">Cambiar Contraseña</a>
+                            </li>
+                            <span>|</span>
+                            <li>
+                                <a class="centros" href="#">Centros Educativos</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="lista_centros">
+            <div class=" grey centros">
+                <h2>Datos Personales</h2>
+                <div class="bloque_izquierdo">
+                    <img src="./imgs/profile.jpg" alt="">
+                </div>
+                <div class="bloque_derecho">
+                    <p>
+                        Nombre del Padre: <span id="nombre_completo_padre"></span>
+                    </p>
+                    <p>
+                        Correo Padre: <span id="correo_padre"></span>
+                    </p>
+                    <p>
+                        Telefono del Padre: <span id="telefono_padre"></span>
+                    </p>
+                    <p>
+                        Cedula: <span id="identificacion_padre"></span>
+                    </p>
+                    <p>
+                        Provincia: <span id="provincia_padre"></span>
+                    </p>
+                    <p>
+                        Cantón: <span id="canton_padre"></span>
+                    </p>
+                    <p>
+                        Distrito: <span id="distrito_padre"></span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="grey atrasados">
+                <strong>Lista de favoritos</strong>
+                <table id="tbl_centro">
+                    <thead>
+                        <tr>
+                            <th>Nombre del Centro</th>
+                            <th>Correo</th>
+                            <th>Ubicación</th>
+                            <th>Tipo (publica o privada)</th>
+                            <th>Oferta Académica (publica o privada)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <footer>
+            <div class="footer__cuerpo">
+                <div class="footer__flex">
+                    <ul class="footer__lista__top">
+                        <li>
+                            <h4 class="footer__lista__header">Contacto</h4>
+                        </li>
+                        <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'><i
+                                    class="fa fas fa-phone"></i> Tel&eacute;fono:
+                                22-24-66-88</a></li>
+                        <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'><i
+                                    class="fa fas fa-fax"></i> Fax:
+                                29-53-55-22</a></li>
+                        <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'><i
+                                    class="fa fas fa-envelope-square"></i> Correo electr&oacute;nico:
+                                educacion@ucenfotec.com</a></li>
+                    </ul>
+                    <ul class="footer__lista__top">
+                        <li>
+                            <h4 class="footer__lista__header">Direcci&oacute;n</h4>
+                        </li>
+                        <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'>San
+                                Jos&eacute;,
+                                Barrio Cristo
+                                Rey</a></li>
+                        <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'>Av 24,
+                                calle
+                                12</a></li>
+                    </ul>
+                    <ul class="footer__lista__top">
+                        <li>
+                            <h4 class="footer__lista__header">Citas</h4>
+                        </li>
+                        <li><a class="footer__ancla__generica footer__ancla__lista" href='javascript:void(0);'><i
+                                    class="far fa-calendar-alt"></i> Agendar</a></li>
+                    </ul>
+                    <section class="footer__social__seccion footer__flex">
+                        <span class="footer__social__traslapar footer__social__conectate">
+                            Conectate <span class="footer__social__pequeno">con</span> nosotros
+                        </span>
+                        <span class="footer__social__traslapar footer__social__iconos__envoltura">
+                            <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank"
+                                title="Pinterest"><i class="fab fa-pinterest-square"></i></a>
+                            <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank"
+                                title="Facebook"><i class="fab fa-facebook-square"></i></a>
+                            <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank"
+                                title="Twitter"><i class="fab fa-twitter-square"></i></a>
+                            <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank"
+                                title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank"
+                                title="Youtube"><i class="fab fa-youtube"></i></a>
+                            <a class="footer__ancla__generica" href="javascript:void(0);" target="_blank"
+                                title="Google Plus"><i class="fab fa-google-plus-square"></i></a>
+                        </span>
+                    </section>
+                    <section class="footer__inferior__seccion footer__flex">
+                        <div class="footer__inferior__envoltura">
+                            <i class="fa fa-copyright"></i> 2019
+                            <address class="footer__direccion__compania">JAMS</address>
+                            <span class="footer__inferior__derechos"> - Todos los derechos reservados </span>
+                        </div>
+                        <div class="footer__inferior__envoltura">
+                            <a class="footer__ancla__generica" href="javascript:void(0);">Condiciones</a> | <a
+                                class="footer__ancla__generica" href="javascript:void(0);">Privacidad</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </footer>
+    </main>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/servicio_perfil_padres.js"></script>
+<script src="js/servicio_registro_padre.js"></script>
+<script src="js/controlador_perfil_padre.js"></script>
+<script src="js/controlador_nav.js"></script>
+
+</html>

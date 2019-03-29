@@ -13,6 +13,7 @@
     "body-parser": "^1.18.3",
     "connect": "^3.6.6",
     "express": "^4.16.4",
+    "mongoose-plugin-autoinc": "^1.1.9",
     "mongoose": "^5.4.13",
     "morgan": "^1.9.1",
     "nodemailer": "^5.1.1",

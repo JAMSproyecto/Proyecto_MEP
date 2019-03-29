@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Citas</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/jquery.datetimepicker.min.css"/>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/generales_cita.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/formulario_cita.css"/>
+    <link rel="stylesheet" href="css/footer.css"/>
+
+
+ 
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top"></div>
+        <div class="header__bottom">
+            <div class="columna__izquierda">
+                <a href="#">
+                    <img src="imgs/logo_mep.png" class="imagen_mep">
+                </a>
+            </div>
+            <div class="columna__derecha">
+                <div class="contenedor">
+                    <nav class="celda">
+                        <a class="logo" href="#">
+                            <img src="imgs/parents.jpg" />
+
+                            <span>roberto</span>
+                        </a>
+                    </nav>
+                    <form class="celda">
+                        <button type="button" class="btn" id="btn-sesion">cerrar sesión</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h1 class="titulo">Registrar Citas</h1>
+            <div class="wrapper">
+                <div class="celda columna__izquierda-cita">
+                    <div class="columna__contenedor-izquierdo">
+                        <form class="formulario-cita">
+                            <div class="datos">
+                                <label for="txt_nombre">nombre</label>
+                                <div class="controlador">
+                                    <input type="text" id="txt_nombre" />
+                                    <i class="fas fa-user-alt"></i>
+                                </div>
+                            </div>
+                            <div class="datos">
+                                <label for="txt_apellidos">apellidos</label>
+
+                                <div class="controlador">
+                                    <input type="text" id="txt_apellidos" />
+                                    <i class="fas fa-user-alt"></i>
+                                </div>
+
+
+                            </div>
+                            <div class="datos">
+                                <label for="txt_telefono">teléfono</label>
+
+                                <div class="controlador">
+                                    <input type="text" id="txt_telefono" />
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                            </div>
+                            <div class="datos">
+                                <label for="txt_correo">correo</label>
+                                <div class="controlador">
+                                    <input type="text" id="txt_correo" />
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+
+                            </div>
+                            <!-- -->
+                            <input type="hidden" id="centro" name="codigo_centro" value="23152" />
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+                <div class="celda columna__derecha-cita">
+                    <div class="columna__contenedor">
+                        <form class="cita">
+                            <div class="fecha">
+                                <label for="fecha">Fecha</label>
+                                <input type="text" id="fecha">
+                            </div>
+                            <div class="hora">
+                                <label for="hora">Hora</label>
+                                <input type="time"  id="hora">
+                            </div>
+                        </form>
+                        <form class="frm__motivo">
+                            <div>
+                                <label for="motivo_cita">Motivo Cita</label>
+                                <select id="motivo_cita">
+                                    <option value="">--Seleccione un motivo--</option>
+                                    <option value="matricula">Matricula</option>
+                                    <option value="servicios">Servicios</option>
+                                    <option value="otros">Traslado</option>
+                                    <option value="Precio">Precio</option>
+                                </select>
+                            </div>
+
+                            <div class="comentario">
+                                <label for="comentario">Comentario</p>
+                                    <textarea id="comentario"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <form class="formulario-boton">
+            <button type="button" class="btn_registrar" id="btn">Registrar</button>
+
+        </form>
+    </main>
+
+    <footer>
+        <div class="columna-derecha">
+            <div class="info-contacto">
+                <div class="telefono">
+                    <i class="fa fas fa-phone"></i>
+                    <strong>Telefono: </strong>
+                    <strong>22-24-66-88</strong>
+                </div>
+                <div class="fax">
+                    <i class="fa fas fa-fax"></i>
+                    <strong>Fax: </strong>
+                    <strong>29-53-55-22</strong>
+                </div>
+
+                <div class="correo">
+                    <i class="fa fas fa-envelope-square"></i>
+                    <strong>Corre: </strong>
+                    <strong>educacion@cenfotec.com</strong>
+
+
+                </div>
+            </div>
+
+
+            <div class="direccion">
+                <strong>Dirección</strong>
+        <p>San jose, Bario Cristo Rey</p>
+                <p>Av 24, calle 12</p>
+            </div>
+
+            <div class="calendario">
+                    <i class="fas fa-calendar-alt"></i>
+                    <strong>Citas</strong>
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="./js/jquery.datetimepicker.full.js"></script>
+    <script src="js/servicios_cita.js"></script>
+    <script src="js/controlador_registrar_cita.js"></script>
+  
+</body>
+
+</html>

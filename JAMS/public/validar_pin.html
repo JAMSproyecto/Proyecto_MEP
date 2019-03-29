@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validacion de Pin</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/registro.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+
+<body>
+    <section>
+        <h1>Validación de Pin</h1>
+    </section>
+
+    <section class="bloque_pin">
+        <h3>Por favor ingrese el pin que ha recibido en su correo electrónico</h3>
+        <div>
+            <label for="input_pin">Pin de Validación</label>
+            <input type="text" id="input_pin">
+        </div>
+
+        <div class="bloque_registro">
+            <div>
+                <label for="txt_contrasena">Digite su contraseña</label>
+                <input type="password" id="txt_contrasena">
+            </div>
+            <div>
+                <label for="txt_contrasena2">Redigite su contraseña</label>
+                <input type="password" id="txt_contrasena2">
+            </div>
+        </div>
+
+        <div>
+            <button id="boton_registrar">Registrarse</button>
+        </div>
+
+    </section>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="js/servicio_validar_pin.js"></script>
+<script src="js/controlador_validar_pin.js"></script>
+
+
+</html>
